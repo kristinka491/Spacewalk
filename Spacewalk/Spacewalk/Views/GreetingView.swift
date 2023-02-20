@@ -9,25 +9,64 @@ import SwiftUI
 
 struct GreetingView: View {
     
+    @State private var showText = false
+    
     var body: some View {
-        ZStack {
-            Image("greetingViewBackground")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-            
-            VStack {
-                Text("Explore the Universe!")
-                    .foregroundColor(.white)
-                    .font(.custom("Times New Roman", size: 40))
-                    .offset(y: 25)
+        NavigationView {
+            ZStack {
+                Image("greetingViewBackground")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
                 
-                Text("Learn more about the universe we all live in")
-                    .foregroundColor(.gray)
-                    .font(.custom("Times New Roman", size: 20))
-                    .offset(y: 60)
+                VStack {
+                    animation(view: Text("Welcome!"), duration: 2, delay: 1)
+                        .foregroundColor(.white)
+                        .font(.custom("Times New Roman", size: 40))
+
+                    animation(view: Text("Learn more about the universe we all live in"), duration: 1, delay: 3)
+                        .foregroundColor(.white)
+                        .font(.custom("Times New Roman", size: 20))
+                    
+                    Divider()
+                        .frame(height: 40)
+                    
+                    VStack {
+                        HStack {
+                            animation(view: NavigationLink(destination: LogInView()) {
+                                                    Text("Explore")
+                                                        .font(.custom("Times New Roman", size: 25))
+                                                        .foregroundColor(.white)
+                                                },
+                                      duration: 1,
+                                      delay: 5)
+                            .buttonBorderShape(.capsule)
+                            .tint(.blue.opacity(2.5))
+                            .buttonStyle(.bordered)
+                            .padding()
+    
+                            animation(view: NavigationLink(destination: SignInView()) {
+                                                    Text("Sign in")
+                                                        .font(.custom("Times New Roman", size: 25))
+                                                        .foregroundColor(.white)
+                                                        .underline(pattern: .solid)
+                                                },
+                                      duration: 1,
+                                      delay: 6)
+                            .padding()
+                        }
+                    }
+                }
             }
         }
+    }
+    
+    func animation <T: View>(view: T, duration: Int, delay: Double) -> some View {
+        view.opacity(showText ? 1 : 0)
+            .animation(.easeInOut(duration: 1).delay(delay), value: showText)
+            .onAppear {
+                showText = true
+            }
     }
 }
 

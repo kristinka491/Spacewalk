@@ -11,7 +11,7 @@ import SwiftUI
 struct SpacewalkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GreetingView()
         }
     }
 }
