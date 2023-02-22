@@ -24,7 +24,7 @@ struct GreetingView: View {
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 40))
 
-                    animation(view: Text("Learn more about the universe we all live in"), duration: 1, delay: 3)
+                    animation(view: Text("Learn more about the universe we all live in"), duration: 2, delay: 2)
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 20))
                     
@@ -39,20 +39,20 @@ struct GreetingView: View {
                                                         .foregroundColor(.white)
                                                 },
                                       duration: 1,
-                                      delay: 5)
+                                      delay: 3)
                             .buttonBorderShape(.capsule)
                             .tint(.blue.opacity(2.5))
                             .buttonStyle(.bordered)
                             .padding()
     
-                            animation(view: NavigationLink(destination: SignInView()) {
-                                                    Text("Sign in")
+                            animation(view: NavigationLink(destination: SignUpView()) {
+                                                    Text("Sign up")
                                                         .font(.custom("Times New Roman", size: 25))
                                                         .foregroundColor(.white)
                                                         .underline(pattern: .solid)
                                                 },
                                       duration: 1,
-                                      delay: 6)
+                                      delay: 4)
                             .padding()
                         }
                     }

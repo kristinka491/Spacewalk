@@ -12,7 +12,6 @@ struct LogInView: View {
         ZStack {
             Image("viewBackground")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
         }.toolbar(.hidden)
     }
