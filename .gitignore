@@ -61,6 +61,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-Noontime\ list/Pods
+Spacewalk/Pods
 .DS_Store
 Breakpoints_v2.xcbkptlist
