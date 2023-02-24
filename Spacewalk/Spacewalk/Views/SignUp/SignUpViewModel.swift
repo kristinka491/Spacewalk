@@ -14,6 +14,8 @@ class SignUpViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var password: String = ""
     @Published var isValid = false
+    @Published var isShowError = false
+    @Published var isRegistered = false
     
     private let realmDataStore = RealmDataStore.shared
     private var cancellableSet: Set<AnyCancellable> = []
@@ -28,6 +30,11 @@ class SignUpViewModel: ObservableObject {
     }
     
     func saveUser() {
-        realmDataStore.addUser(name: name, login: username, password: password)
+        let isUserRegistered = realmDataStore.addUser(name: name, login: username, password: password)
+        if !isUserRegistered {
+            isShowError = true
+        } else {
+            isRegistered = true
+        }
     }
 }

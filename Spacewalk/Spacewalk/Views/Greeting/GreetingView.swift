@@ -12,7 +12,7 @@ struct GreetingView: View {
     @State private var showText = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Image("greetingViewBackground")
                     .resizable()
@@ -20,11 +20,11 @@ struct GreetingView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    animation(view: Text("Welcome!"), duration: 2, delay: 1)
+                    animation(view: Text(StringConstants.greetingTitle), duration: 2, delay: 1)
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 40))
 
-                    animation(view: Text("Learn more about the universe we all live in"), duration: 2, delay: 2)
+                    animation(view: Text(StringConstants.greetingDescription), duration: 2, delay: 2)
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 20))
                     
@@ -34,7 +34,7 @@ struct GreetingView: View {
                     VStack {
                         HStack {
                             animation(view: NavigationLink(destination: LogInView()) {
-                                                    Text("Explore")
+                                Text(StringConstants.greetingExploreButton)
                                                         .font(.custom("Times New Roman", size: 25))
                                                         .foregroundColor(.white)
                                                 },
@@ -46,7 +46,7 @@ struct GreetingView: View {
                             .padding()
     
                             animation(view: NavigationLink(destination: SignUpView()) {
-                                                    Text("Sign up")
+                                Text(StringConstants.greetingSignUpButton)
                                                         .font(.custom("Times New Roman", size: 25))
                                                         .foregroundColor(.white)
                                                         .underline(pattern: .solid)

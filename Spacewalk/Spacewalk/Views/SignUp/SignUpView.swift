@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @StateObject var viewModel: SignUpViewModel
-        
-    init() {
-        _viewModel = StateObject(wrappedValue: .init())
-    }
+    @StateObject var viewModel = SignUpViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Image("viewBackground")
                     .resizable()
@@ -23,18 +19,18 @@ struct SignUpView: View {
 
                 VStack(alignment: .center, spacing: 20) {
 
-                    Text("Hi there!")
+                    Text(StringConstants.signUpTitle)
                         .foregroundColor(.white)
                         .padding(.horizontal)
                         .font(.custom("Times New Roman", size: 35))
 
 
-                    Text("Please, enter your information below")
+                    Text(StringConstants.signUpDescription)
                         .foregroundColor(.white)
                         .padding(.horizontal)
                         .font(.custom("Times New Roman", size: 20))
 
-                    TextField("username", text: $viewModel.username)
+                    TextField(StringConstants.signUpUsernamePlaceholder, text: $viewModel.username)
                         .padding(.all)
                         .font(.custom("Times New Roman", size: 20))
                         .foregroundColor(.black)
@@ -42,14 +38,14 @@ struct SignUpView: View {
                         .cornerRadius(20)
                         .autocapitalization(.none)
 
-                    TextField("name", text: $viewModel.name)
+                    TextField(StringConstants.signUpNamePlaceholder, text: $viewModel.name)
                         .padding(.all)
                         .font(.custom("Times New Roman", size: 20))
                         .foregroundColor(.black)
                         .background()
                         .cornerRadius(20)
 
-                    SecureField("password", text: $viewModel.password)
+                    SecureField(StringConstants.signUpPasswordPlaceholder, text: $viewModel.password)
                         .padding(.all)
                         .font(.custom("Times New Roman", size: 20))
                         .foregroundColor(.black)
@@ -58,36 +54,43 @@ struct SignUpView: View {
 
                     HStack() {
 
-                        Text("Already have an account?")
+                        Text(StringConstants.sighUpAlreadyHaveAnAccount)
                             .foregroundColor(.white)
                             .font(.custom("Times New Roman", size: 20))
                             .padding(.horizontal)
 
                         NavigationLink(destination: LogInView()) {
-                            Text("Log In")
+                            Text(StringConstants.signUpLoginButton)
                                 .font(.custom("Times New Roman", size: 20))
                                 .foregroundColor(.white)
                         }
                     }
 
-                    NavigationLink(destination: MainView().onAppear() {
+                    Button(action: {
                         viewModel.saveUser()
-                    }) {
-                        Text("Create an account")
+                    }, label: {
+                        Text(StringConstants.signUpCreateAnAccountButton)
                             .font(.custom("Times New Roman", size: 25))
                             .foregroundColor(.white)
-                       
-                    }.buttonStyle(.bordered)
-                        .buttonBorderShape(.capsule)
-                        .controlSize(.large)
-                        .disabled(!viewModel.isValid)
-
+                    })
+                    .buttonStyle(.bordered)
+                    .buttonBorderShape(.capsule)
+                    .controlSize(.large)
+                    .disabled(!viewModel.isValid)
 
                     Divider()
                         .frame(height: 30)
                 }
             }
-        }.toolbar(.hidden)
+            .navigationDestination(isPresented: $viewModel.isRegistered) {
+                MainView()
+            }
+        }
+        .toolbar(.hidden)
+        .alert(DataError.userIsRegistered.title, isPresented: $viewModel.isShowError) {
+        } message: {
+            Text(DataError.userIsRegistered.message)
+        }
     }
 }
 
