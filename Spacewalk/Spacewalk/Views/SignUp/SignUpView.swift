@@ -83,7 +83,7 @@ struct SignUpView: View {
                 }
             }
             .navigationDestination(isPresented: $viewModel.isRegistered) {
-                MainView()
+                StarSystemsView()
             }
         }
         .toolbar(.hidden)

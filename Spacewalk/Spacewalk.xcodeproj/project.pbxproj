@@ -14,13 +14,17 @@
 		3E392918299F99A8008E4817 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392917299F99A8008E4817 /* GreetingView.swift */; };
 		3E39291A29A3A538008E4817 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291929A3A538008E4817 /* SignUpView.swift */; };
 		3E39291C29A3A546008E4817 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291B29A3A546008E4817 /* LogInView.swift */; };
-		3E39291E29A79B9C008E4817 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291D29A79B9C008E4817 /* MainView.swift */; };
+		3E39291E29A79B9C008E4817 /* StarSystemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291D29A79B9C008E4817 /* StarSystemsView.swift */; };
 		3E39292129A7A490008E4817 /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292029A7A490008E4817 /* RealmDataStore.swift */; };
 		3E39292429A7A4A6008E4817 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292329A7A4A6008E4817 /* User.swift */; };
 		3E39292729A7A954008E4817 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292629A7A954008E4817 /* SignUpViewModel.swift */; };
 		3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292A29A7B300008E4817 /* LoginViewModel.swift */; };
 		3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292D29A8C8C0008E4817 /* StringConstants.swift */; };
 		3E39293029A8DABA008E4817 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292F29A8DABA008E4817 /* DataError.swift */; };
+		3EDCD63529B8A3F40039A3B7 /* StarSystemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */; };
+		3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */; };
+		3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */; };
+		3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */; };
 		9FC0ACEE27841B20C532C86A /* Pods_Spacewalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F091558B1F4F77920D9DA7F1 /* Pods_Spacewalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,13 +37,17 @@
 		3E392917299F99A8008E4817 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		3E39291929A3A538008E4817 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3E39291B29A3A546008E4817 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		3E39291D29A79B9C008E4817 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3E39291D29A79B9C008E4817 /* StarSystemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsView.swift; sourceTree = "<group>"; };
 		3E39292029A7A490008E4817 /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		3E39292329A7A4A6008E4817 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E39292629A7A954008E4817 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3E39292A29A7B300008E4817 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3E39292D29A8C8C0008E4817 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		3E39292F29A8DABA008E4817 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsViewModel.swift; sourceTree = "<group>"; };
+		3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsModel.swift; sourceTree = "<group>"; };
+		3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsModel.swift; sourceTree = "<group>"; };
+		3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsModel.swift; sourceTree = "<group>"; };
 		5373D339C119FB7D7A79A09A /* Pods-Spacewalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spacewalk.debug.xcconfig"; path = "Target Support Files/Pods-Spacewalk/Pods-Spacewalk.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8C5C62C64AE9E6C500EB50 /* Pods-Spacewalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spacewalk.release.xcconfig"; path = "Target Support Files/Pods-Spacewalk/Pods-Spacewalk.release.xcconfig"; sourceTree = "<group>"; };
 		F091558B1F4F77920D9DA7F1 /* Pods_Spacewalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spacewalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,7 @@
 		3E392907299F91B7008E4817 /* Spacewalk */ = {
 			isa = PBXGroup;
 			children = (
+				3EDCD63629B8AA900039A3B7 /* Network */,
 				3E39292C29A8C83C008E4817 /* Helper */,
 				3E39291F29A7A406008E4817 /* Store */,
 				3E392908299F91B7008E4817 /* SpacewalkApp.swift */,
@@ -112,7 +121,7 @@
 				3E39292829A7B2DB008E4817 /* Greeting */,
 				3E39292529A7A93D008E4817 /* SignUp */,
 				3E39292929A7B2EC008E4817 /* Login */,
-				3E39291D29A79B9C008E4817 /* MainView.swift */,
+				3EDCD63329B8A3E10039A3B7 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +176,33 @@
 				3E39292F29A8DABA008E4817 /* DataError.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		3EDCD63329B8A3E10039A3B7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3E39291D29A79B9C008E4817 /* StarSystemsView.swift */,
+				3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3EDCD63629B8AA900039A3B7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3EDCD63F29B8AAF20039A3B7 /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3EDCD63F29B8AAF20039A3B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */,
+				3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */,
+				3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEA439DCDAC624722E192125 /* Frameworks */ = {
@@ -291,12 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */,
 				3E39291C29A3A546008E4817 /* LogInView.swift in Sources */,
 				3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */,
+				3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */,
 				3E39292129A7A490008E4817 /* RealmDataStore.swift in Sources */,
-				3E39291E29A79B9C008E4817 /* MainView.swift in Sources */,
+				3E39291E29A79B9C008E4817 /* StarSystemsView.swift in Sources */,
 				3E39290B299F91B7008E4817 /* ContentView.swift in Sources */,
+				3EDCD63529B8A3F40039A3B7 /* StarSystemsViewModel.swift in Sources */,
 				3E39292729A7A954008E4817 /* SignUpViewModel.swift in Sources */,
+				3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */,
 				3E39293029A8DABA008E4817 /* DataError.swift in Sources */,
 				3E39292429A7A4A6008E4817 /* User.swift in Sources */,
 				3E392918299F99A8008E4817 /* GreetingView.swift in Sources */,

@@ -74,7 +74,7 @@ struct LogInView: View {
                 }
             }
             .navigationDestination(isPresented: $viewModel.isRegistered) {
-                MainView()
+                StarSystemsView()
             }
         }.toolbar(.hidden)
             .alert(DataError.wrongUsernameOrPassword.title, isPresented: $viewModel.isShowError) {
