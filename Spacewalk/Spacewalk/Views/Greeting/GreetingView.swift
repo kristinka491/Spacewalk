@@ -19,42 +19,37 @@ struct GreetingView: View {
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
                 
-                VStack {
+                VStack(spacing: 0) {
                     animation(view: Text(StringConstants.greetingTitle), duration: 2, delay: 1)
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 40))
-
+                        .padding(.bottom, 20)
+                    
                     animation(view: Text(StringConstants.greetingDescription), duration: 2, delay: 2)
                         .foregroundColor(.white)
                         .font(.custom("Times New Roman", size: 20))
-                    
-                    Divider()
-                        .frame(height: 40)
-                    
-                    VStack {
-                        HStack {
-                            animation(view: NavigationLink(destination: LogInView()) {
-                                Text(StringConstants.greetingExploreButton)
-                                                        .font(.custom("Times New Roman", size: 25))
-                                                        .foregroundColor(.white)
-                                                },
-                                      duration: 1,
-                                      delay: 3)
-                            .buttonBorderShape(.capsule)
-                            .tint(.blue.opacity(2.5))
-                            .buttonStyle(.bordered)
-                            .padding()
-    
-                            animation(view: NavigationLink(destination: SignUpView()) {
-                                Text(StringConstants.greetingSignUpButton)
-                                                        .font(.custom("Times New Roman", size: 25))
-                                                        .foregroundColor(.white)
-                                                        .underline(pattern: .solid)
-                                                },
-                                      duration: 1,
-                                      delay: 4)
-                            .padding()
-                        }
+                        .padding(.bottom, 20)
+                        
+                    HStack(spacing: 20) {
+                        animation(view: NavigationLink(destination: LogInView()) {
+                            Text(StringConstants.greetingExploreButton)
+                                .font(.custom("Times New Roman", size: 25))
+                                .foregroundColor(.white)
+                        },
+                                  duration: 1,
+                                  delay: 3)
+                        .buttonBorderShape(.capsule)
+                        .tint(.blue.opacity(2.5))
+                        .buttonStyle(.bordered)
+                        
+                        animation(view: NavigationLink(destination: SignUpView()) {
+                            Text(StringConstants.greetingSignUpButton)
+                                .font(.custom("Times New Roman", size: 25))
+                                .foregroundColor(.white)
+                                .underline(pattern: .solid)
+                        },
+                                  duration: 1,
+                                  delay: 4)
                     }
                 }
             }

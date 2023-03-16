@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  HomeViewModel.swift
 //  Spacewalk
 //
 //  Created by Krystsina on 2023-03-08.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StarSystemsViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     
     @Published var systems = [StarSystemsModel]()
     

@@ -42,4 +42,7 @@ struct StringConstants {
     static let loginDontHaveAnAccount = "Don't have an account?"
     static let loginSignUpButton = "Sign up"
     static let loginSignInButton = "Sign in"
+    
+    // StarSystems
+    static let starSystemsTitle = "Star Systems"
 }

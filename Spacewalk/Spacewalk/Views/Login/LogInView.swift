@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct LogInView: View {
-    @StateObject var viewModel: LoginViewModel
-        
-    init() {
-        _viewModel = StateObject(wrappedValue: .init())
-    }
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -21,34 +17,24 @@ struct LogInView: View {
                     .resizable()
                     .ignoresSafeArea()
                 
-                VStack(alignment: .center, spacing: 20) {
+                VStack(spacing: 0) {
                     
                     Text(StringConstants.loginTitle)
                         .foregroundColor(.white)
                         .padding(.horizontal)
                         .font(.custom("Times New Roman", size: 35))
+                        .padding(.bottom, 20)
                     
-                    TextField(StringConstants.loginUsernamePlaceholder, text: $viewModel.username)
-                        .padding(.all)
-                        .font(.custom("Times New Roman", size: 20))
-                        .foregroundColor(.black)
-                        .background(.white)
-                        .cornerRadius(20)
-                        .autocapitalization(.none)
+                    AuthorizationTextField(placeHolder: StringConstants.loginUsernamePlaceholder, text: $viewModel.username)
                     
-                    TextField(StringConstants.loginPasswordPlaceholder, text: $viewModel.password)
-                        .padding(.all)
-                        .font(.custom("Times New Roman", size: 20))
-                        .foregroundColor(.black)
-                        .background()
-                        .cornerRadius(20)
+                    TogglePasswordTextField(password: $viewModel.password)
                     
-                    HStack() {
+                    HStack(spacing: 20) {
                         
                         Text(StringConstants.loginDontHaveAnAccount)
                             .foregroundColor(.white)
                             .font(.custom("Times New Roman", size: 20))
-                            .padding(.horizontal)
+                            
                         
                         NavigationLink(destination: SignUpView()) {
                             Text(StringConstants.loginSignUpButton)
@@ -56,6 +42,7 @@ struct LogInView: View {
                                 .foregroundColor(.white)
                         }
                     }
+                    .padding(.bottom, 20)
                     
                     Button(action: {
                         viewModel.getUser()
@@ -68,13 +55,10 @@ struct LogInView: View {
                     .buttonBorderShape(.capsule)
                     .controlSize(.large)
                     .disabled(!viewModel.isValid)
-                    
-                    Divider()
-                        .frame(height: 30)
                 }
             }
             .navigationDestination(isPresented: $viewModel.isRegistered) {
-                StarSystemsView()
+                HomeView()
             }
         }.toolbar(.hidden)
             .alert(DataError.wrongUsernameOrPassword.title, isPresented: $viewModel.isShowError) {

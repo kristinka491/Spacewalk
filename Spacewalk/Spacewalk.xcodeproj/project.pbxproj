@@ -14,14 +14,17 @@
 		3E392918299F99A8008E4817 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392917299F99A8008E4817 /* GreetingView.swift */; };
 		3E39291A29A3A538008E4817 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291929A3A538008E4817 /* SignUpView.swift */; };
 		3E39291C29A3A546008E4817 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291B29A3A546008E4817 /* LogInView.swift */; };
-		3E39291E29A79B9C008E4817 /* StarSystemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291D29A79B9C008E4817 /* StarSystemsView.swift */; };
+		3E39291E29A79B9C008E4817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39291D29A79B9C008E4817 /* HomeView.swift */; };
 		3E39292129A7A490008E4817 /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292029A7A490008E4817 /* RealmDataStore.swift */; };
 		3E39292429A7A4A6008E4817 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292329A7A4A6008E4817 /* User.swift */; };
 		3E39292729A7A954008E4817 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292629A7A954008E4817 /* SignUpViewModel.swift */; };
 		3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292A29A7B300008E4817 /* LoginViewModel.swift */; };
 		3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292D29A8C8C0008E4817 /* StringConstants.swift */; };
 		3E39293029A8DABA008E4817 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292F29A8DABA008E4817 /* DataError.swift */; };
-		3EDCD63529B8A3F40039A3B7 /* StarSystemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */; };
+		3E729C4F29C3407700152C74 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C4E29C3407700152C74 /* AuthorizationTextField.swift */; };
+		3E729C5229C3483D00152C74 /* SecureAuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */; };
+		3E729C5429C3492000152C74 /* TogglePasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */; };
+		3EDCD63529B8A3F40039A3B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD63429B8A3F40039A3B7 /* HomeViewModel.swift */; };
 		3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */; };
 		3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */; };
 		3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */; };
@@ -37,14 +40,17 @@
 		3E392917299F99A8008E4817 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		3E39291929A3A538008E4817 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3E39291B29A3A546008E4817 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		3E39291D29A79B9C008E4817 /* StarSystemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsView.swift; sourceTree = "<group>"; };
+		3E39291D29A79B9C008E4817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3E39292029A7A490008E4817 /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		3E39292329A7A4A6008E4817 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E39292629A7A954008E4817 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3E39292A29A7B300008E4817 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3E39292D29A8C8C0008E4817 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		3E39292F29A8DABA008E4817 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
-		3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsViewModel.swift; sourceTree = "<group>"; };
+		3E729C4E29C3407700152C74 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
+		3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthorizationTextField.swift; sourceTree = "<group>"; };
+		3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglePasswordTextField.swift; sourceTree = "<group>"; };
+		3EDCD63429B8A3F40039A3B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsModel.swift; sourceTree = "<group>"; };
 		3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsModel.swift; sourceTree = "<group>"; };
 		3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsModel.swift; sourceTree = "<group>"; };
@@ -98,11 +104,9 @@
 				3EDCD63629B8AA900039A3B7 /* Network */,
 				3E39292C29A8C83C008E4817 /* Helper */,
 				3E39291F29A7A406008E4817 /* Store */,
-				3E392908299F91B7008E4817 /* SpacewalkApp.swift */,
 				3E392916299F988E008E4817 /* Views */,
 				3E39290A299F91B7008E4817 /* ContentView.swift */,
-				3E39290C299F91B8008E4817 /* Assets.xcassets */,
-				3E39290E299F91B8008E4817 /* Preview Content */,
+				3E729C4D29C33EDA00152C74 /* App */,
 			);
 			path = Spacewalk;
 			sourceTree = "<group>";
@@ -121,7 +125,8 @@
 				3E39292829A7B2DB008E4817 /* Greeting */,
 				3E39292529A7A93D008E4817 /* SignUp */,
 				3E39292929A7B2EC008E4817 /* Login */,
-				3EDCD63329B8A3E10039A3B7 /* Main */,
+				3EDCD63329B8A3E10039A3B7 /* Home */,
+				3E729C5029C3420400152C74 /* Reusable */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,13 +183,33 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		3EDCD63329B8A3E10039A3B7 /* Main */ = {
+		3E729C4D29C33EDA00152C74 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3E39291D29A79B9C008E4817 /* StarSystemsView.swift */,
-				3EDCD63429B8A3F40039A3B7 /* StarSystemsViewModel.swift */,
+				3E392908299F91B7008E4817 /* SpacewalkApp.swift */,
+				3E39290C299F91B8008E4817 /* Assets.xcassets */,
+				3E39290E299F91B8008E4817 /* Preview Content */,
 			);
-			path = Main;
+			path = App;
+			sourceTree = "<group>";
+		};
+		3E729C5029C3420400152C74 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				3E729C4E29C3407700152C74 /* AuthorizationTextField.swift */,
+				3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */,
+				3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		3EDCD63329B8A3E10039A3B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3E39291D29A79B9C008E4817 /* HomeView.swift */,
+				3EDCD63429B8A3F40039A3B7 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3EDCD63629B8AA900039A3B7 /* Network */ = {
@@ -329,20 +354,23 @@
 			files = (
 				3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */,
 				3E39291C29A3A546008E4817 /* LogInView.swift in Sources */,
+				3E729C5229C3483D00152C74 /* SecureAuthorizationTextField.swift in Sources */,
 				3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */,
 				3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */,
 				3E39292129A7A490008E4817 /* RealmDataStore.swift in Sources */,
-				3E39291E29A79B9C008E4817 /* StarSystemsView.swift in Sources */,
+				3E39291E29A79B9C008E4817 /* HomeView.swift in Sources */,
 				3E39290B299F91B7008E4817 /* ContentView.swift in Sources */,
-				3EDCD63529B8A3F40039A3B7 /* StarSystemsViewModel.swift in Sources */,
+				3EDCD63529B8A3F40039A3B7 /* HomeViewModel.swift in Sources */,
 				3E39292729A7A954008E4817 /* SignUpViewModel.swift in Sources */,
 				3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */,
 				3E39293029A8DABA008E4817 /* DataError.swift in Sources */,
+				3E729C4F29C3407700152C74 /* AuthorizationTextField.swift in Sources */,
 				3E39292429A7A4A6008E4817 /* User.swift in Sources */,
 				3E392918299F99A8008E4817 /* GreetingView.swift in Sources */,
 				3E39291A29A3A538008E4817 /* SignUpView.swift in Sources */,
 				3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */,
 				3E392909299F91B7008E4817 /* SpacewalkApp.swift in Sources */,
+				3E729C5429C3492000152C74 /* TogglePasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Spacewalk/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Spacewalk/App/Preview Content\"";
 				DEVELOPMENT_TEAM = 93V4WB9C37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -501,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Spacewalk/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Spacewalk/App/Preview Content\"";
 				DEVELOPMENT_TEAM = 93V4WB9C37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

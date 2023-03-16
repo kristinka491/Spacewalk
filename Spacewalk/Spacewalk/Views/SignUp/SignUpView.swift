@@ -17,54 +17,39 @@ struct SignUpView: View {
                     .resizable()
                     .ignoresSafeArea()
 
-                VStack(alignment: .center, spacing: 20) {
+                VStack(spacing: 0) {
 
                     Text(StringConstants.signUpTitle)
                         .foregroundColor(.white)
                         .padding(.horizontal)
                         .font(.custom("Times New Roman", size: 35))
+                        .padding(.bottom, 20)
 
 
                     Text(StringConstants.signUpDescription)
                         .foregroundColor(.white)
                         .padding(.horizontal)
                         .font(.custom("Times New Roman", size: 20))
+                        .padding(.bottom, 20)
 
-                    TextField(StringConstants.signUpUsernamePlaceholder, text: $viewModel.username)
-                        .padding(.all)
-                        .font(.custom("Times New Roman", size: 20))
-                        .foregroundColor(.black)
-                        .background(.white)
-                        .cornerRadius(20)
-                        .autocapitalization(.none)
+                    AuthorizationTextField(placeHolder: StringConstants.signUpUsernamePlaceholder, text: $viewModel.username)
 
-                    TextField(StringConstants.signUpNamePlaceholder, text: $viewModel.name)
-                        .padding(.all)
-                        .font(.custom("Times New Roman", size: 20))
-                        .foregroundColor(.black)
-                        .background()
-                        .cornerRadius(20)
+                    AuthorizationTextField(placeHolder: StringConstants.signUpNamePlaceholder, text: $viewModel.name)
 
-                    SecureField(StringConstants.signUpPasswordPlaceholder, text: $viewModel.password)
-                        .padding(.all)
-                        .font(.custom("Times New Roman", size: 20))
-                        .foregroundColor(.black)
-                        .background()
-                        .cornerRadius(20)
-
-                    HStack() {
+                    TogglePasswordTextField(password: $viewModel.password)
+                    
+                    HStack(spacing: 20) {
 
                         Text(StringConstants.sighUpAlreadyHaveAnAccount)
                             .foregroundColor(.white)
                             .font(.custom("Times New Roman", size: 20))
-                            .padding(.horizontal)
 
                         NavigationLink(destination: LogInView()) {
                             Text(StringConstants.signUpLoginButton)
                                 .font(.custom("Times New Roman", size: 20))
                                 .foregroundColor(.white)
                         }
-                    }
+                    }.padding(.bottom, 20)
 
                     Button(action: {
                         viewModel.saveUser()
@@ -77,13 +62,10 @@ struct SignUpView: View {
                     .buttonBorderShape(.capsule)
                     .controlSize(.large)
                     .disabled(!viewModel.isValid)
-
-                    Divider()
-                        .frame(height: 30)
                 }
             }
             .navigationDestination(isPresented: $viewModel.isRegistered) {
-                StarSystemsView()
+                HomeView()
             }
         }
         .toolbar(.hidden)
