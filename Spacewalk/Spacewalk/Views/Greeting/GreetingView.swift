@@ -22,18 +22,18 @@ struct GreetingView: View {
                 VStack(spacing: 0) {
                     animation(view: Text(StringConstants.greetingTitle), duration: 2, delay: 1)
                         .foregroundColor(.white)
-                        .font(.custom("Times New Roman", size: 40))
+                        .font(.custom("Baskerville", size: 40))
                         .padding(.bottom, 20)
                     
                     animation(view: Text(StringConstants.greetingDescription), duration: 2, delay: 2)
                         .foregroundColor(.white)
-                        .font(.custom("Times New Roman", size: 20))
+                        .font(.custom("Baskerville", size: 20))
                         .padding(.bottom, 20)
                         
                     HStack(spacing: 20) {
                         animation(view: NavigationLink(destination: LogInView()) {
                             Text(StringConstants.greetingExploreButton)
-                                .font(.custom("Times New Roman", size: 25))
+                                .font(.custom("Baskerville", size: 25))
                                 .foregroundColor(.white)
                         },
                                   duration: 1,
@@ -44,7 +44,7 @@ struct GreetingView: View {
                         
                         animation(view: NavigationLink(destination: SignUpView()) {
                             Text(StringConstants.greetingSignUpButton)
-                                .font(.custom("Times New Roman", size: 25))
+                                .font(.custom("Baskerville", size: 25))
                                 .foregroundColor(.white)
                                 .underline(pattern: .solid)
                         },
@@ -61,7 +61,7 @@ struct GreetingView: View {
             .animation(.easeInOut(duration: 1).delay(delay), value: showText)
             .onAppear {
                 showText = true
-            }
+        }
     }
 }
 

@@ -8,19 +8,18 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    
-    @Published var systems = [StarSystemsModel]()
+    @Published var solarSystem = SolarSystem()
     
     func loadData() async {
-        guard let url = URL(string: "http://127.0.0.1:5000/starSystems") else {
+        guard let url = URL(string: "http://127.0.0.1:5000/solarSystem") else {
             print("Invalid URL")
             return
         }
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
 
-            if let decodedResponse = try? JSONDecoder().decode(SystemsModel.self, from: data) {
-                systems = decodedResponse.starSystems ?? []
+            if let decodedResponse = try? JSONDecoder().decode(SolarSystem.self, from: data) {
+                solarSystem = decodedResponse
             }
         } catch {
             print("Invalid data")

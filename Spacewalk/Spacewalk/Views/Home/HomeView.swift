@@ -9,39 +9,40 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
+    @State var isTitleShown = false
+    @State var isSubtitleShown = false
     
     var body: some View {
         ZStack() {
-            Image("back")
-                .resizable()
+            Color.black
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack(spacing: 10) {
-                        LazyVStack {
-                            ForEach(viewModel.systems, id: \.name) { item in
-                                
-                                Text(item.name ?? "")
-                                    .font(.custom("Times New Roman", size: 30))
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    .padding(.bottom, 15)
-                                
-                                HStack() {
-                                    Image(systemName: "planet")
-                                    Text(item.description ?? "")
-                                        .font(.custom("Times New Roman", size: 20))
-                                        .foregroundColor(.white)
-                                        .padding(.bottom, 15)
-                                }
+                ZStack() {
+                    Text(StringConstants.homeTitle)
+                        .font(.custom("Baskerville", size: 40))
+                        .foregroundColor(isTitleShown ? .white: .clear)
+                        .animation(.easeOut(duration: 2).delay(0.1), value: isTitleShown)
+                        .onAppear {
+                            isTitleShown = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                               isTitleShown = false
                             }
                         }
-                        .padding([.leading, .trailing, .top], 20)
+                    
+                    Text(StringConstants.homeSubtitle)
+                        .font(.custom("Georgia", size: 20))
+                        .foregroundColor(isSubtitleShown ? .white: .clear)
+                        .animation(.easeInOut(duration: 5).delay(4), value: isSubtitleShown)
+                        .onAppear {
+                            isSubtitleShown = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                               isSubtitleShown = false
+                        }
                     }
                 }
-                .padding([.bottom, .top], 20)
             }
         }.task {
             await viewModel.loadData()

@@ -22,14 +22,14 @@ struct SignUpView: View {
                     Text(StringConstants.signUpTitle)
                         .foregroundColor(.white)
                         .padding(.horizontal)
-                        .font(.custom("Times New Roman", size: 35))
+                        .font(.custom("Baskerville", size: 35))
                         .padding(.bottom, 20)
 
 
                     Text(StringConstants.signUpDescription)
                         .foregroundColor(.white)
                         .padding(.horizontal)
-                        .font(.custom("Times New Roman", size: 20))
+                        .font(.custom("Baskerville", size: 20))
                         .padding(.bottom, 20)
 
                     AuthorizationTextField(placeHolder: StringConstants.signUpUsernamePlaceholder, text: $viewModel.username)
@@ -42,11 +42,11 @@ struct SignUpView: View {
 
                         Text(StringConstants.sighUpAlreadyHaveAnAccount)
                             .foregroundColor(.white)
-                            .font(.custom("Times New Roman", size: 20))
+                            .font(.custom("Baskerville", size: 20))
 
                         NavigationLink(destination: LogInView()) {
                             Text(StringConstants.signUpLoginButton)
-                                .font(.custom("Times New Roman", size: 20))
+                                .font(.custom("Baskerville", size: 20)).underline()
                                 .foregroundColor(.white)
                         }
                     }.padding(.bottom, 20)
@@ -55,7 +55,7 @@ struct SignUpView: View {
                         viewModel.saveUser()
                     }, label: {
                         Text(StringConstants.signUpCreateAnAccountButton)
-                            .font(.custom("Times New Roman", size: 25))
+                            .font(.custom("Baskerville", size: 25))
                             .foregroundColor(.white)
                     })
                     .buttonStyle(.bordered)

@@ -13,7 +13,7 @@ struct SecureAuthorizationTextField: View {
     
     var body: some View {
         SecureField(placeHolder, text: $text)
-            .font(.custom("Times New Roman", size: 20))
+            .font(.custom("Baskerville", size: 20))
             .frame(height: 50)
             .multilineTextAlignment(.center)
             .foregroundColor(.black)

@@ -25,9 +25,8 @@
 		3E729C5229C3483D00152C74 /* SecureAuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */; };
 		3E729C5429C3492000152C74 /* TogglePasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */; };
 		3EDCD63529B8A3F40039A3B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD63429B8A3F40039A3B7 /* HomeViewModel.swift */; };
-		3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */; };
 		3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */; };
-		3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */; };
+		3EDCD65129B9FB8F0039A3B7 /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCD65029B9FB8F0039A3B7 /* SolarSystem.swift */; };
 		9FC0ACEE27841B20C532C86A /* Pods_Spacewalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F091558B1F4F77920D9DA7F1 /* Pods_Spacewalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,9 +50,8 @@
 		3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthorizationTextField.swift; sourceTree = "<group>"; };
 		3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglePasswordTextField.swift; sourceTree = "<group>"; };
 		3EDCD63429B8A3F40039A3B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemsModel.swift; sourceTree = "<group>"; };
 		3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsModel.swift; sourceTree = "<group>"; };
-		3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSystemsModel.swift; sourceTree = "<group>"; };
+		3EDCD65029B9FB8F0039A3B7 /* SolarSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystem.swift; sourceTree = "<group>"; };
 		5373D339C119FB7D7A79A09A /* Pods-Spacewalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spacewalk.debug.xcconfig"; path = "Target Support Files/Pods-Spacewalk/Pods-Spacewalk.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8C5C62C64AE9E6C500EB50 /* Pods-Spacewalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spacewalk.release.xcconfig"; path = "Target Support Files/Pods-Spacewalk/Pods-Spacewalk.release.xcconfig"; sourceTree = "<group>"; };
 		F091558B1F4F77920D9DA7F1 /* Pods_Spacewalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spacewalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +221,7 @@
 		3EDCD63F29B8AAF20039A3B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3EDCD64C29B8ADAE0039A3B7 /* SystemsModel.swift */,
-				3EDCD65029B9FB8F0039A3B7 /* StarSystemsModel.swift */,
+				3EDCD65029B9FB8F0039A3B7 /* SolarSystem.swift */,
 				3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */,
 			);
 			path = Model;
@@ -352,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDCD65129B9FB8F0039A3B7 /* StarSystemsModel.swift in Sources */,
+				3EDCD65129B9FB8F0039A3B7 /* SolarSystem.swift in Sources */,
 				3E39291C29A3A546008E4817 /* LogInView.swift in Sources */,
 				3E729C5229C3483D00152C74 /* SecureAuthorizationTextField.swift in Sources */,
 				3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */,
@@ -362,7 +359,6 @@
 				3E39290B299F91B7008E4817 /* ContentView.swift in Sources */,
 				3EDCD63529B8A3F40039A3B7 /* HomeViewModel.swift in Sources */,
 				3E39292729A7A954008E4817 /* SignUpViewModel.swift in Sources */,
-				3EDCD64D29B8ADAE0039A3B7 /* SystemsModel.swift in Sources */,
 				3E39293029A8DABA008E4817 /* DataError.swift in Sources */,
 				3E729C4F29C3407700152C74 /* AuthorizationTextField.swift in Sources */,
 				3E39292429A7A4A6008E4817 /* User.swift in Sources */,

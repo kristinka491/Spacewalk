@@ -22,7 +22,7 @@ struct LogInView: View {
                     Text(StringConstants.loginTitle)
                         .foregroundColor(.white)
                         .padding(.horizontal)
-                        .font(.custom("Times New Roman", size: 35))
+                        .font(.custom("Baskerville", size: 35))
                         .padding(.bottom, 20)
                     
                     AuthorizationTextField(placeHolder: StringConstants.loginUsernamePlaceholder, text: $viewModel.username)
@@ -33,12 +33,12 @@ struct LogInView: View {
                         
                         Text(StringConstants.loginDontHaveAnAccount)
                             .foregroundColor(.white)
-                            .font(.custom("Times New Roman", size: 20))
+                            .font(.custom("Baskerville", size: 20))
                             
                         
                         NavigationLink(destination: SignUpView()) {
                             Text(StringConstants.loginSignUpButton)
-                                .font(.custom("Times New Roman", size: 20))
+                                .font(.custom("Baskerville", size: 20)).underline()
                                 .foregroundColor(.white)
                         }
                     }
@@ -48,7 +48,7 @@ struct LogInView: View {
                         viewModel.getUser()
                     }, label: {
                         Text(StringConstants.loginSignInButton)
-                            .font(.custom("Times New Roman", size: 25))
+                            .font(.custom("Baskerville", size: 25))
                             .foregroundColor(.white)
                     })
                     .buttonStyle(.bordered)
