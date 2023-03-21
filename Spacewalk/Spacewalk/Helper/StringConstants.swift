@@ -44,6 +44,6 @@ struct StringConstants {
     static let loginSignInButton = "Sign in"
     
     // Home
-    static let homeTitle = "Hello, darling"
-    static let homeSubtitle = "Let's dive into our Solar System"
+    static let homeTitle = "Let's dive into our Solar System"
+    static let homeSubtitle = "Tap on either planet you like and explore it with us. Good luck!"
 }

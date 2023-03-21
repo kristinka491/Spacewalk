@@ -58,7 +58,7 @@ struct GreetingView: View {
     
     func animation <T: View>(view: T, duration: Int, delay: Double) -> some View {
         view.opacity(showText ? 1 : 0)
-            .animation(.easeInOut(duration: 1).delay(delay), value: showText)
+            .animation(.easeInOut(duration: Double(duration)).delay(delay), value: showText)
             .onAppear {
                 showText = true
         }

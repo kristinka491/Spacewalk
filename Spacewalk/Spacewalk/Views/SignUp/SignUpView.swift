@@ -13,7 +13,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("viewBackground")
+                Image("starBackground")
                     .resizable()
                     .ignoresSafeArea()
 
@@ -51,17 +51,19 @@ struct SignUpView: View {
                         }
                     }.padding(.bottom, 20)
 
-                    Button(action: {
-                        viewModel.saveUser()
-                    }, label: {
-                        Text(StringConstants.signUpCreateAnAccountButton)
-                            .font(.custom("Baskerville", size: 25))
-                            .foregroundColor(.white)
-                    })
-                    .buttonStyle(.bordered)
-                    .buttonBorderShape(.capsule)
-                    .controlSize(.large)
-                    .disabled(!viewModel.isValid)
+                    ZStack() {
+                        Button(action: {
+                            viewModel.saveUser()
+                        }, label: {
+                            Text(StringConstants.signUpCreateAnAccountButton)
+                                .font(.custom("Baskerville", size: 25))
+                                .foregroundColor(.white)
+                        })
+                        .buttonStyle(.bordered)
+                        .buttonBorderShape(.capsule)
+                        .controlSize(.large)
+                        .disabled(!viewModel.isValid)
+                    }
                 }
             }
             .navigationDestination(isPresented: $viewModel.isRegistered) {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SolarSystem: Codable {
+struct SolarSystem: Decodable {
     var description: String?
     var mainStar: String?
     var mainStarDescription: String?

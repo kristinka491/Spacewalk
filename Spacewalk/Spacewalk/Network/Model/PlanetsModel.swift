@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct PlanetsModel: Codable {
+struct PlanetsModel: Decodable {
     var name: String?
     var mass: String?
     var distanceFromStar: String?

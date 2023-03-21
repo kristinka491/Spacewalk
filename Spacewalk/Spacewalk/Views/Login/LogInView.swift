@@ -13,7 +13,7 @@ struct LogInView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("viewBackground")
+                Image("starBackground")
                     .resizable()
                     .ignoresSafeArea()
                 

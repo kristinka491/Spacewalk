@@ -9,43 +9,69 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
-    @State var isTitleShown = false
+    @State var isTitleShown = true
     @State var isSubtitleShown = false
+    @State var isSunShown = false
+    @State private var offsetX = 0.0
+    @State private var offsetY = 0.0
     
     var body: some View {
-        ZStack() {
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack(spacing: 0) {
-                ZStack() {
-                    Text(StringConstants.homeTitle)
-                        .font(.custom("Baskerville", size: 40))
-                        .foregroundColor(isTitleShown ? .white: .clear)
-                        .animation(.easeOut(duration: 2).delay(0.1), value: isTitleShown)
-                        .onAppear {
-                            isTitleShown = true
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                               isTitleShown = false
+        NavigationStack {
+            ZStack() {
+                Image("starBackground")
+                    .resizable()
+                    .ignoresSafeArea()
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 0) {
+                        
+                        Text(StringConstants.homeTitle)
+                            .font(.custom("Baskerville", size: 30)).bold()
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding(.top, 5)
+                            .padding([.trailing, .leading], 20)
+                            .padding(.bottom, 10)
+                        
+                        Text(StringConstants.homeSubtitle)
+                            .font(.custom("Baskerville", size: 20))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding([.trailing, .leading], 20)
+                            .padding(.bottom, 30)
+                        
+                        Image("Sun")
+                            .resizable()
+                            .frame(width: 170, height: 170)
+                            .padding(.bottom, 10)
+                        
+                        Text(viewModel.solarSystem.mainStar ?? "")
+                            .font(.custom("Baskerville", size: 20)).bold()
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding(.bottom, 20)
+                        
+                        Text(viewModel.solarSystem.mainStarDescription ?? "")
+                            .font(.custom("Baskerville", size: 20))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding(.bottom, 20)
+                              
+                        ScrollView(.horizontal ,showsIndicators: false) {
+                            LazyHStack(spacing: 20) {
+                                ForEach(viewModel.solarSystem.planets ?? [], id: \.name) { item in
+                                    NavigationLink(destination: PlanetDescriptionView(model: item )) {
+                                        PlanetView(name: item.name ?? "", height: 150, width: 150)
+                                    }
+                                }
                             }
-                        }
-                    
-                    Text(StringConstants.homeSubtitle)
-                        .font(.custom("Georgia", size: 20))
-                        .foregroundColor(isSubtitleShown ? .white: .clear)
-                        .animation(.easeInOut(duration: 5).delay(4), value: isSubtitleShown)
-                        .onAppear {
-                            isSubtitleShown = true
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                               isSubtitleShown = false
                         }
                     }
                 }
             }
-        }.task {
-            await viewModel.loadData()
+        }.onAppear {
+            Task { @MainActor in
+               await viewModel.loadData()
+            }
         }
     }
 }
