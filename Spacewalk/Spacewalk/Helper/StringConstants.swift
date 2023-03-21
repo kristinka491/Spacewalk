@@ -46,4 +46,9 @@ struct StringConstants {
     // Home
     static let homeTitle = "Let's dive into our Solar System"
     static let homeSubtitle = "Tap on either planet you like and explore it with us. Good luck!"
+    
+    // PlanetDescription
+    static let planetDescriptionMass = "Mass:"
+    static let planetDescriptionDistanceFromSun = "Distance from Sun:"
+    static let planetDescriptionOrbitalPeriod = "Orbital period:"
 }
