@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlanetDescriptionView: View {
+    @State var isImageRounded = false
     var model: PlanetsModel
     var body: some View {
         ZStack() {
@@ -26,6 +27,11 @@ struct PlanetDescriptionView: View {
                         Image(model.name ?? "")
                             .resizable()
                             .frame(width: 200, height: 200)
+                            .rotationEffect(.degrees(isImageRounded ? 360.0 : 0.0))
+                            .animation(.linear(duration: 2).speed(0.1).repeatForever(autoreverses: false), value: isImageRounded)
+                            .onAppear {
+                                isImageRounded = true
+                            }
                         
                         HStack(spacing: 0) {
                             Image("thermometer")
@@ -53,7 +59,7 @@ struct PlanetDescriptionView: View {
                     .padding(.leading, 10)
                     
                     Divider()
-                        .background(Color.white)
+                        .background(Color.gray)
                         .padding(.bottom, 10)
                     
                     HStack(spacing: 0) {
@@ -68,55 +74,55 @@ struct PlanetDescriptionView: View {
                     .padding(.bottom, 20)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            VStack(spacing: 10) {
-                                Text(StringConstants.planetDescriptionMass)
-                                    .foregroundColor(.black)
-                                    .font(.custom("Baskerville", size: 16)).bold()
-                                    .padding(.top, 10)
-                                    .padding(.horizontal, 10)
-                                
+                        HStack(spacing: 5) {
+                            VStack(spacing: 0) {
                                 Text(model.mass ?? "")
-                                    .foregroundColor(.black)
-                                    .font(.custom("Baskerville", size: 16))
-                                    .padding(.bottom, 10)
-                                    .padding(.horizontal, 10)
-                            }
-                            .background(Color.white).opacity(0.7)
-                            .cornerRadius(20)
-                            
-                            VStack(spacing: 10) {
-                                Text(StringConstants.planetDescriptionDistanceFromSun)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .font(.custom("Baskerville", size: 16)).bold()
                                     .padding(.top, 10)
                                     .padding(.horizontal, 10)
                                 
+                                Text(StringConstants.planetDescriptionMass)
+                                    .foregroundColor(.gray)
+                                    .font(.custom("Baskerville", size: 16))
+                                    .padding(.bottom, 10)
+                                    .padding(.horizontal, 10)
+                            }
+                            
+                            Divider()
+                                .background(Color.white)
+                            
+                            VStack(spacing: 0) {
                                 Text(model.distanceFromStar ?? "")
-                                    .foregroundColor(.black)
-                                    .font(.custom("Baskerville", size: 16))
-                                    .padding(.bottom, 10)
-                                    .padding(.horizontal, 10)
-                            }
-                            .background(Color.white).opacity(0.7)
-                            .cornerRadius(20)
-                            
-                            VStack(spacing: 10) {
-                                Text(StringConstants.planetDescriptionOrbitalPeriod)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .font(.custom("Baskerville", size: 16)).bold()
                                     .padding(.top, 10)
                                     .padding(.horizontal, 10)
                                 
-                                Text(model.orbitalPeriod ?? "")
-                                    .foregroundColor(.black)
+                                Text(StringConstants.planetDescriptionDistanceFromSun)
+                                    .foregroundColor(.gray)
                                     .font(.custom("Baskerville", size: 16))
                                     .padding(.bottom, 10)
                                     .padding(.horizontal, 10)
                             }
-                            .background(Color.white).opacity(0.7)
-                            .cornerRadius(20)
-                        }
+                            
+                            Divider()
+                                .background(Color.white)
+
+                            VStack(spacing: 0) {
+                                Text(model.orbitalPeriod ?? "").bold()
+                                    .foregroundColor(.white)
+                                    .font(.custom("Baskerville", size: 16))
+                                    .padding(.top, 10)
+                                    .padding(.horizontal, 10)
+                                
+                                Text(StringConstants.planetDescriptionOrbitalPeriod)
+                                    .foregroundColor(.gray)
+                                    .font(.custom("Baskerville", size: 16))
+                                    .padding(.bottom, 10)
+                                    .padding(.horizontal, 10)
+                            }
+                        }.frame(maxWidth: .infinity)
                     }.padding(.horizontal, 10)
                 }
             }

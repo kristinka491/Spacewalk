@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
+    @State var isImageRounded = false
     @State var isTitleShown = true
     @State var isSubtitleShown = false
     @State var isSunShown = false
@@ -43,6 +44,11 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: 170, height: 170)
                             .padding(.bottom, 10)
+                            .rotationEffect(.degrees(isImageRounded ? 360.0 : 0.0))
+                            .animation(.linear(duration: 2).speed(0.1).repeatForever(autoreverses: false), value: isImageRounded)
+                            .onAppear {
+                                isImageRounded = true
+                            }
                         
                         Text(viewModel.solarSystem.mainStar ?? "")
                             .font(.custom("Baskerville", size: 20)).bold()
@@ -67,7 +73,7 @@ struct HomeView: View {
                         }
                     }
                 }
-            }
+            }.toolbar(.hidden)
         }.onAppear {
             Task { @MainActor in
                await viewModel.loadData()
