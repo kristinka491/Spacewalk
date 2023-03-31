@@ -43,6 +43,11 @@ struct StringConstants {
     static let loginSignUpButton = "Sign up"
     static let loginSignInButton = "Sign in"
     
+    // Welcome
+    static let welcomeTitle = "Astrophilia"
+    static let welcomeSubtitle = "(n.) rare love and obsession with planets, stars, and outer space"
+    static let welcomeButtonTitle = "Let's get started"
+    
     // Home
     static let homeTitle = "Let's dive into our Solar System"
     static let homeSubtitle = "Tap on either planet you like and explore it with us. Good luck!"

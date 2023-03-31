@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  HomrView.swift
 //  Spacewalk
 //
 //  Created by Krystsina on 2023-02-23.
@@ -10,12 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     @State var isImageRounded = false
-    @State var isTitleShown = true
-    @State var isSubtitleShown = false
-    @State var isSunShown = false
-    @State private var offsetX = 0.0
-    @State private var offsetY = 0.0
-    
+   
     var body: some View {
         NavigationStack {
             ZStack() {

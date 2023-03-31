@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1191B829D6D2A5000F71D2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1191B729D6D2A5000F71D2 /* WelcomeView.swift */; };
 		3E392909299F91B7008E4817 /* SpacewalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392908299F91B7008E4817 /* SpacewalkApp.swift */; };
 		3E39290B299F91B7008E4817 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39290A299F91B7008E4817 /* ContentView.swift */; };
 		3E39290D299F91B8008E4817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E39290C299F91B8008E4817 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1191B729D6D2A5000F71D2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		3E392905299F91B7008E4817 /* Spacewalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacewalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E392908299F91B7008E4817 /* SpacewalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacewalkApp.swift; sourceTree = "<group>"; };
 		3E39290A299F91B7008E4817 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3E1191B629D6D27A000F71D2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3E1191B729D6D2A5000F71D2 /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		3E3928FC299F91B7008E4817 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		3E392916299F988E008E4817 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E1191B629D6D27A000F71D2 /* Welcome */,
 				3E39292829A7B2DB008E4817 /* Greeting */,
 				3E39292529A7A93D008E4817 /* SignUp */,
 				3E39292929A7B2EC008E4817 /* Login */,
@@ -391,6 +402,7 @@
 				3E39292429A7A4A6008E4817 /* User.swift in Sources */,
 				3EFF9D5529C893620084A4FE /* PlanetView.swift in Sources */,
 				3E392918299F99A8008E4817 /* GreetingView.swift in Sources */,
+				3E1191B829D6D2A5000F71D2 /* WelcomeView.swift in Sources */,
 				3E39291A29A3A538008E4817 /* SignUpView.swift in Sources */,
 				3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */,
 				3E392909299F91B7008E4817 /* SpacewalkApp.swift in Sources */,

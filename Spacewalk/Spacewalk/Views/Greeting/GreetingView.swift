@@ -20,12 +20,12 @@ struct GreetingView: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    animation(view: Text(StringConstants.greetingTitle), duration: 2, delay: 1)
+                    animation(view: Text(StringConstants.greetingTitle), duration: 1, delay: 1)
                         .foregroundColor(.white)
                         .font(.custom("Baskerville", size: 40))
                         .padding(.bottom, 20)
                     
-                    animation(view: Text(StringConstants.greetingDescription), duration: 2, delay: 2)
+                    animation(view: Text(StringConstants.greetingDescription), duration: 1, delay: 2)
                         .foregroundColor(.white)
                         .font(.custom("Baskerville", size: 20))
                         .padding(.bottom, 20)
@@ -53,6 +53,7 @@ struct GreetingView: View {
                     }
                 }
             }
+            .toolbar(.hidden)
         }
     }
     

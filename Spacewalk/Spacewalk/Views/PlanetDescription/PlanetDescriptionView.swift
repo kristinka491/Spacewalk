@@ -10,6 +10,7 @@ import SwiftUI
 struct PlanetDescriptionView: View {
     @State var isImageRounded = false
     var model: PlanetsModel
+    
     var body: some View {
         ZStack() {
             Image("starBackground")
