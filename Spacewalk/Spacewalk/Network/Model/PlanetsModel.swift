@@ -15,9 +15,10 @@ struct PlanetsModel: Decodable {
     var orbitalPeriod: String?
     var temperature: String?
     var description: String?
+    var satellites: [SatelliteModel]?
     
     private enum CodingKeys: String, CodingKey {
-        case name, description, mass, distanceFromStar, orbitalPeriod, temperature
+        case name, description, mass, distanceFromStar, orbitalPeriod, temperature, satellites
     }
 }
 

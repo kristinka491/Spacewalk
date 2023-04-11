@@ -22,6 +22,10 @@
 		3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292A29A7B300008E4817 /* LoginViewModel.swift */; };
 		3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292D29A8C8C0008E4817 /* StringConstants.swift */; };
 		3E39293029A8DABA008E4817 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39292F29A8DABA008E4817 /* DataError.swift */; };
+		3E589B2F29E5407400AF43E8 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E589B2E29E5407400AF43E8 /* SatelliteModel.swift */; };
+		3E589B3229E541A500AF43E8 /* SatelliteDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E589B3129E541A500AF43E8 /* SatelliteDescriptionView.swift */; };
+		3E589B3429E541AF00AF43E8 /* SatelliteDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E589B3329E541AF00AF43E8 /* SatelliteDescriptionViewModel.swift */; };
+		3E589B3729E5553F00AF43E8 /* SatelliteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E589B3629E5553F00AF43E8 /* SatelliteView.swift */; };
 		3E729C4F29C3407700152C74 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C4E29C3407700152C74 /* AuthorizationTextField.swift */; };
 		3E729C5229C3483D00152C74 /* SecureAuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */; };
 		3E729C5429C3492000152C74 /* TogglePasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */; };
@@ -51,6 +55,10 @@
 		3E39292A29A7B300008E4817 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3E39292D29A8C8C0008E4817 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		3E39292F29A8DABA008E4817 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		3E589B2E29E5407400AF43E8 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
+		3E589B3129E541A500AF43E8 /* SatelliteDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDescriptionView.swift; sourceTree = "<group>"; };
+		3E589B3329E541AF00AF43E8 /* SatelliteDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDescriptionViewModel.swift; sourceTree = "<group>"; };
+		3E589B3629E5553F00AF43E8 /* SatelliteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteView.swift; sourceTree = "<group>"; };
 		3E729C4E29C3407700152C74 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		3E729C5129C3483D00152C74 /* SecureAuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthorizationTextField.swift; sourceTree = "<group>"; };
 		3E729C5329C3492000152C74 /* TogglePasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglePasswordTextField.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 				3E39292929A7B2EC008E4817 /* Login */,
 				3EDCD63329B8A3E10039A3B7 /* Home */,
 				3EFF9D5629C8979F0084A4FE /* PlanetDescription */,
+				3E589B3029E5418400AF43E8 /* SatelliteDescription */,
 				3E729C5029C3420400152C74 /* Reusable */,
 			);
 			path = Views;
@@ -199,6 +208,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		3E589B3029E5418400AF43E8 /* SatelliteDescription */ = {
+			isa = PBXGroup;
+			children = (
+				3E589B3129E541A500AF43E8 /* SatelliteDescriptionView.swift */,
+				3E589B3329E541AF00AF43E8 /* SatelliteDescriptionViewModel.swift */,
+			);
+			path = SatelliteDescription;
+			sourceTree = "<group>";
+		};
+		3E589B3529E5553000AF43E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E589B3629E5553F00AF43E8 /* SatelliteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3E729C4D29C33EDA00152C74 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +268,7 @@
 			children = (
 				3EDCD65029B9FB8F0039A3B7 /* SolarSystem.swift */,
 				3EDCD64E29B9F7820039A3B7 /* PlanetsModel.swift */,
+				3E589B2E29E5407400AF43E8 /* SatelliteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +284,7 @@
 		3EFF9D5629C8979F0084A4FE /* PlanetDescription */ = {
 			isa = PBXGroup;
 			children = (
+				3E589B3529E5553000AF43E8 /* Views */,
 				3EFF9D5729C897BA0084A4FE /* PlanetDescriptionView.swift */,
 				3EFF9D5929C897C50084A4FE /* PlanetDescriptionViewModel.swift */,
 			);
@@ -385,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E589B3729E5553F00AF43E8 /* SatelliteView.swift in Sources */,
 				3EDCD65129B9FB8F0039A3B7 /* SolarSystem.swift in Sources */,
 				3EFF9D5829C897BA0084A4FE /* PlanetDescriptionView.swift in Sources */,
 				3E39291C29A3A546008E4817 /* LogInView.swift in Sources */,
@@ -392,6 +421,7 @@
 				3E39292E29A8C8C0008E4817 /* StringConstants.swift in Sources */,
 				3EFF9D5A29C897C50084A4FE /* PlanetDescriptionViewModel.swift in Sources */,
 				3EDCD64F29B9F7820039A3B7 /* PlanetsModel.swift in Sources */,
+				3E589B3229E541A500AF43E8 /* SatelliteDescriptionView.swift in Sources */,
 				3E39292129A7A490008E4817 /* RealmDataStore.swift in Sources */,
 				3E39291E29A79B9C008E4817 /* HomeView.swift in Sources */,
 				3E39290B299F91B7008E4817 /* ContentView.swift in Sources */,
@@ -403,10 +433,12 @@
 				3EFF9D5529C893620084A4FE /* PlanetView.swift in Sources */,
 				3E392918299F99A8008E4817 /* GreetingView.swift in Sources */,
 				3E1191B829D6D2A5000F71D2 /* WelcomeView.swift in Sources */,
+				3E589B3429E541AF00AF43E8 /* SatelliteDescriptionViewModel.swift in Sources */,
 				3E39291A29A3A538008E4817 /* SignUpView.swift in Sources */,
 				3E39292B29A7B300008E4817 /* LoginViewModel.swift in Sources */,
 				3E392909299F91B7008E4817 /* SpacewalkApp.swift in Sources */,
 				3E729C5429C3492000152C74 /* TogglePasswordTextField.swift in Sources */,
+				3E589B2F29E5407400AF43E8 /* SatelliteModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

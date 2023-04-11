@@ -12,7 +12,7 @@ struct SpacewalkApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                GreetingView()
+                WelcomeView()
             }
         }
     }

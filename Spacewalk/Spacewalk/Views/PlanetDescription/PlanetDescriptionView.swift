@@ -125,6 +125,27 @@ struct PlanetDescriptionView: View {
                             }
                         }.frame(maxWidth: .infinity)
                     }.padding(.horizontal, 10)
+                    
+                    if model.satellites != nil {
+                        HStack() {
+                            Text(StringConstants.planetDescriptionSatellites)
+                                .foregroundColor(.white)
+                                .font(.custom("Baskerville", size: 20))
+                                .padding(.top, 10)
+                                .padding(.horizontal, 10)
+                            Spacer()
+                        }
+                    }
+                    
+                    ScrollView(.horizontal ,showsIndicators: false) {
+                        LazyHStack(spacing: 20) {
+                            ForEach(model.satellites ?? [], id: \.name) { item in
+                                NavigationLink(destination: SatelliteDescriptionView(model: item )) {
+                                    SatelliteView(name: item.name ?? "", height: 150, width: 150)
+                                }
+                            }
+                        }
+                    }.padding(.leading, 20)
                 }
             }
         }

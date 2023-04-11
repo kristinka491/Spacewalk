@@ -28,13 +28,6 @@ struct HomeView: View {
                             .padding([.trailing, .leading], 20)
                             .padding(.bottom, 10)
                         
-                        Text(StringConstants.homeSubtitle)
-                            .font(.custom("Baskerville", size: 20))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .padding([.trailing, .leading], 20)
-                            .padding(.bottom, 30)
-                        
                         Image("Sun")
                             .resizable()
                             .frame(width: 170, height: 170)
@@ -56,6 +49,17 @@ struct HomeView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(.white)
                             .padding(.bottom, 20)
+                        
+                        Divider()
+                            .background(Color.white)
+                            .padding(.bottom, 20)
+                        
+                        Text(StringConstants.homeSubtitle)
+                            .font(.custom("Baskerville", size: 15))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding([.trailing, .leading], 20)
+                            .padding(.bottom, 30)
                               
                         ScrollView(.horizontal ,showsIndicators: false) {
                             LazyHStack(spacing: 20) {
