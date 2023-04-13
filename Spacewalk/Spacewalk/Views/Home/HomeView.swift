@@ -73,10 +73,8 @@ struct HomeView: View {
                     }
                 }
             }.toolbar(.hidden)
-        }.onAppear {
-            Task { @MainActor in
-               await viewModel.loadData()
-            }
+        }.task {
+            await viewModel.loadData()
         }
     }
 }

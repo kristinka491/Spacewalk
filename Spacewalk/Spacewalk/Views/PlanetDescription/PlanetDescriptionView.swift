@@ -127,21 +127,18 @@ struct PlanetDescriptionView: View {
                     }.padding(.horizontal, 10)
                     
                     if model.satellites != nil {
-                        HStack() {
-                            Text(StringConstants.planetDescriptionSatellites)
-                                .foregroundColor(.white)
-                                .font(.custom("Baskerville", size: 20))
-                                .padding(.top, 10)
-                                .padding(.horizontal, 10)
-                            Spacer()
-                        }
+                        Text(StringConstants.planetDescriptionSatellites)
+                            .foregroundColor(.white)
+                            .font(.custom("Baskerville", size: 20))
+                            .padding(.top, 10)
+                            .padding(.horizontal, 10)
                     }
                     
                     ScrollView(.horizontal ,showsIndicators: false) {
                         LazyHStack(spacing: 20) {
                             ForEach(model.satellites ?? [], id: \.name) { item in
                                 NavigationLink(destination: SatelliteDescriptionView(model: item )) {
-                                    SatelliteView(name: item.name ?? "", height: 150, width: 150)
+                                    SatelliteView(name: item.name ?? "", height: 100, width: 100)
                                 }
                             }
                         }

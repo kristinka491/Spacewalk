@@ -17,7 +17,7 @@ struct SatelliteView: View {
             Image(name)
                 .resizable()
                 .frame(width: width, height: height)
-                .padding(.bottom, 10)
+                .padding(.bottom, 5)
             
             Text(name)
                 .font(.custom("Baskerville", size: 15)).bold()

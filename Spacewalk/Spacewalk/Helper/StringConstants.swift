@@ -57,4 +57,8 @@ struct StringConstants {
     static let planetDescriptionDistanceFromSun = "km to Sun"
     static let planetDescriptionOrbitalPeriod = "orbital period"
     static let planetDescriptionSatellites = "Satellites:"
+    
+    // SatelliteDescription
+    static let satelliteDescriptionAge = "age"
+    static let satelliteDescriptionOrbitalPeriod = "orbital period"
 }
